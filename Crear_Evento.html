@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+    <title>Crear Evento | TickNova</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>TickNova</h2>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">ES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <header>
+            <h1><u>Crear Evento</u></h1>
+            <p>
+                Completa la información para crear tu evento
+            </p>
+        </header>
+        <form action="#" method="post">
+            <section>
+                <h2>Información General:</h2>
+                <div>
+                    <label for="nombre">Nombre del evento *</label>
+                    <input type="text" id="nombre"
+                           name="nombre" required>
+                </div>
+                <div>
+                    <label for="categoria">Categoría *</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Seleccionar categoría</option>
+                        <option value="concierto">Concierto</option>
+                        <option value="teatro">Teatro</option>
+                        <option value="deportes">Deportes</option>
+                        <option value="festival">Festival</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fecha">Fecha y Hora *</label>
+                    <input type="date" id="fecha"
+                           name="fecha" required>
+                    <input type="time" id="hora"
+                           name="hora" required>
+                </div>
+                <div>
+                    <label for="lugar">Lugar/Recinto *</label>
+                    <input type="text" id="lugar"
+                           name="lugar" required>
+                </div>
+                <div>
+                    <label for="direccion">Dirección *</label>
+                    <input type="text" id="direccion"
+                           name="direccion" required>
+                </div>
+                <figure>
+                    <img src="Duki Ameri World Tour.jpeg"
+                         alt="Imagen promocional del evento Duki"
+                         width="250">
+                </figure>
+            </section>
+            <section>
+                <h2>Precios, localidades y disponibilidad</h2>
+                <button type="button">+ Agregar localidad</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Localidad</th>
+                            <th>Precios (USD)</th>
+                            <th>Cantidad Disponible</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>VIP</td>
+                            <td>
+                                <input type="number"
+                                       name="precio_vip"
+                                       value="120.00"
+                                       min="0"
+                                       step="0.01">
+                            </td>
+                            <td>
+                                <input type="number"
+                                       name="cantidad_vip"
+                                       value="500"
+                                       min="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Preferencial</td>
+                            <td>
+                                <input type="number"
+                                       name="precio_preferencial"
+                                       value="85.00"
+                                       min="0"
+                                       step="0.01">
+                            </td>
+                            <td>
+                                <input type="number"
+                                       name="cantidad_preferencial"
+                                       value="1000"
+                                       min="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>General</td>
+                            <td>
+                                <input type="number"
+                                       name="precio_general"
+                                       value="45.00"
+                                       min="0"
+                                       step="0.01">
+                            </td>
+                            <td>
+                                <input type="number"
+                                       name="cantidad_general"
+                                       value="2000"
+                                       min="0">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <figure>
+                    <img src="localidades.png"
+                         alt="Distribución de localidades del evento:
+                         VIP, Preferencial y General"
+                         width="350">
+                </figure>
+            </section>
+            <div>
+                <button type="submit" name="accion"
+                        value="borrador" formnovalidate>
+                    Guardar Borrador
+                </button>
+                <button type="submit" name="accion"
+                        value="publicar">
+                    Publicar Evento
+                </button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
