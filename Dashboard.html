@@ -1,118 +1,98 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>Dashboard | TickNova</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TickNova · Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="admin page-dashboard">
 
-    <aside>
-        <h2>TickNova</h2>
+  <aside>
+    <p class="brand">TickNova</p>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="Dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="Crear_Evento.html">Eventos</a></li>
+      </ul>
+    </nav>
+    <div class="admin-chip">
+      <span class="avatar">AD</span>
+      <div>
+        <strong>Admin</strong>
+        <span>TickNova</span>
+      </div>
+    </div>
+  </aside>
 
-        <nav>
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">Inventario</a></li>
-                <li><a href="#">Usuarios</a></li>
-                <li><a href="#">Reportes</a></li>
-            </ul>
-        </nav>
+  <main>
+    <header class="page-head">
+      <div>
+        <h1>Dashboard</h1>
+        <p>Resumen general de ventas y eventos</p>
+      </div>
+      <a href="Crear_Evento.html" class="btn btn-primary">+ Crear Evento</a>
+    </header>
 
-        <div>
-            <p><strong>Administrador</strong></p>
-            <p>Administrador</p>
-        </div>
-    </aside>
+    <section class="metrics" aria-label="Métricas generales">
+      <article class="metric">
+        <h3>Ingresos del mes</h3>
+        <p class="valor">$48,250</p>
+        <p>+12% vs mes anterior</p>
+      </article>
+      <article class="metric">
+        <h3>Boletos vendidos</h3>
+        <p class="valor">3,120</p>
+        <p>+8% vs mes anterior</p>
+      </article>
+      <article class="metric">
+        <h3>Eventos activos</h3>
+        <p class="valor">14</p>
+        <p>+2 esta semana</p>
+      </article>
+      <article class="metric amarillo">
+        <h3>Ocupación promedio</h3>
+        <p class="valor">82%</p>
+        <p>+5% vs mes anterior</p>
+      </article>
+    </section>
 
-    <main>
+    <section class="chart-card" aria-label="Ventas por semana">
+      <header>
+        <h2>Ventas por semana</h2>
+        <p>Últimos 6 meses</p>
+      </header>
+      <div class="bars">
+        <div class="bar-col"><div class="bar"></div><span>Jun</span></div>
+        <div class="bar-col"><div class="bar"></div><span>Jul</span></div>
+        <div class="bar-col"><div class="bar"></div><span>Ago</span></div>
+        <div class="bar-col"><div class="bar"></div><span>Sep</span></div>
+        <div class="bar-col"><div class="bar"></div><span>Oct</span></div>
+        <div class="bar-col"><div class="bar"></div><span>Nov</span></div>
+      </div>
+    </section>
 
-        <header>
-            <h1>Dashboard</h1>
-            <p>Resumen general - Noviembre 2026</p>
+    <div class="cols-2">
+      <section class="list-card">
+        <h2>Top Eventos</h2>
+        <div class="row"><span>Duki · Ameri World Tour</span><span>1,240</span></div>
+        <div class="row"><span>Festival Indie Fest</span><span>980</span></div>
+        <div class="row"><span>Noche de Jazz UCA</span><span>640</span></div>
+        <div class="row"><span>Stand Up Comedy Live</span><span>410</span></div>
+      </section>
 
-            <a href="#">+ Crear Evento</a>
-        </header>
+      <section class="list-card">
+        <h2>Ventas por zona</h2>
+        <div class="row"><span>VIP</span><span>35%</span></div>
+        <div class="row"><span>Preferencial</span><span>28%</span></div>
+        <div class="row"><span>General</span><span>37%</span></div>
+      </section>
+    </div>
 
-        <section>
-
-            <article>
-                <h3>Ventas del mes</h3>
-                <h2>$42,850</h2>
-                <p>▲ 12% vs mes anterior</p>
-            </article>
-
-            <article>
-                <h3>Boletos vendidos</h3>
-                <h2>3,120</h2>
-                <p>▲ 8%</p>
-            </article>
-
-            <article>
-                <h3>Eventos Activos</h3>
-                <h2>14</h2>
-                <p>3 por publicar</p>
-            </article>
-
-            <article>
-                <h3>Ocupación prom.</h3>
-                <h2>78%</h2>
-                <p>▲ 5%</p>
-            </article>
-
-        </section>
-
-        <section>
-
-            <header>
-                <h2>Ventas por semana</h2>
-                <p>Últimos 2 meses</p>
-            </header>
-
-            <figure>
-                <figcaption>
-                    Gráfico de ventas por semana
-                </figcaption>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Semana</th>
-                            <th>Ventas</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>Semana 1</td>
-                            <td>Por definir</td>
-                        </tr>
-                        <tr>
-                            <td>Semana 2</td>
-                            <td>Por definir</td>
-                        </tr>
-                        <tr>
-                            <td>Semana 3</td>
-                            <td>Por definir</td>
-                        </tr>
-                        <tr>
-                            <td>Semana 4</td>
-                            <td>Por definir</td>
-                        </tr>
-                        <tr>
-                            <td>Semana 5</td>
-                            <td>Por definir</td>
-                        </tr>
-                        <tr>
-                            <td>Semana 6</td>
-                            <td>Por definir</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </figure>
-
-        </section>
-
-    </main>
+    <footer class="page-footer">
+      TickNova · Proyecto POO — Universidad Centroamericana José Simeón Cañas
+    </footer>
+  </main>
 
 </body>
 </html>
