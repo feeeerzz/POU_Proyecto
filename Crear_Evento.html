@@ -1,149 +1,131 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>Crear Evento | TickNova</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TickNova · Crear Evento</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <h2>TickNova</h2>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">Categorías</a></li>
-                <li><a href="#">Ayuda</a></li>
-                <li><a href="#">ES</a></li>
-            </ul>
-        </nav>
+<body class="admin page-crear">
+
+  <aside>
+    <p class="brand">TickNova</p>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="Dashboard.html">Dashboard</a></li>
+        <li><a href="Crear_Evento.html" class="active">Eventos</a></li>
+      </ul>
+    </nav>
+    <div class="admin-chip">
+      <span class="avatar">AD</span>
+      <div>
+        <strong>Admin</strong>
+        <span>TickNova</span>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <header class="crear-head">
+      <div>
+        <h1>Crear Evento</h1>
+        <p>Completa la información para publicar un nuevo evento</p>
+      </div>
+      <div class="acciones">
+        <a href="Dashboard.html" class="btn btn-ghost">Guardar borrador</a>
+        <a href="Dashboard.html" class="btn btn-primary">Publicar evento</a>
+      </div>
     </header>
-    <main>
-        <header>
-            <h1><u>Crear Evento</u></h1>
-            <p>
-                Completa la información para crear tu evento
-            </p>
-        </header>
-        <form action="#" method="post">
-            <section>
-                <h2>Información General:</h2>
-                <div>
-                    <label for="nombre">Nombre del evento *</label>
-                    <input type="text" id="nombre"
-                           name="nombre" required>
-                </div>
-                <div>
-                    <label for="categoria">Categoría *</label>
-                    <select id="categoria" name="categoria" required>
-                        <option value="">Seleccionar categoría</option>
-                        <option value="concierto">Concierto</option>
-                        <option value="teatro">Teatro</option>
-                        <option value="deportes">Deportes</option>
-                        <option value="festival">Festival</option>
-                        <option value="otros">Otros</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="fecha">Fecha y Hora *</label>
-                    <input type="date" id="fecha"
-                           name="fecha" required>
-                    <input type="time" id="hora"
-                           name="hora" required>
-                </div>
-                <div>
-                    <label for="lugar">Lugar/Recinto *</label>
-                    <input type="text" id="lugar"
-                           name="lugar" required>
-                </div>
-                <div>
-                    <label for="direccion">Dirección *</label>
-                    <input type="text" id="direccion"
-                           name="direccion" required>
-                </div>
-                <figure>
-                    <img src="Duki Ameri World Tour.jpeg"
-                         alt="Imagen promocional del evento Duki"
-                         width="250">
-                </figure>
-            </section>
-            <section>
-                <h2>Precios, localidades y disponibilidad</h2>
-                <button type="button">+ Agregar localidad</button>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Localidad</th>
-                            <th>Precios (USD)</th>
-                            <th>Cantidad Disponible</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>VIP</td>
-                            <td>
-                                <input type="number"
-                                       name="precio_vip"
-                                       value="120.00"
-                                       min="0"
-                                       step="0.01">
-                            </td>
-                            <td>
-                                <input type="number"
-                                       name="cantidad_vip"
-                                       value="500"
-                                       min="0">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Preferencial</td>
-                            <td>
-                                <input type="number"
-                                       name="precio_preferencial"
-                                       value="85.00"
-                                       min="0"
-                                       step="0.01">
-                            </td>
-                            <td>
-                                <input type="number"
-                                       name="cantidad_preferencial"
-                                       value="1000"
-                                       min="0">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>General</td>
-                            <td>
-                                <input type="number"
-                                       name="precio_general"
-                                       value="45.00"
-                                       min="0"
-                                       step="0.01">
-                            </td>
-                            <td>
-                                <input type="number"
-                                       name="cantidad_general"
-                                       value="2000"
-                                       min="0">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <figure>
-                    <img src="localidades.png"
-                         alt="Distribución de localidades del evento:
-                         VIP, Preferencial y General"
-                         width="350">
-                </figure>
-            </section>
-            <div>
-                <button type="submit" name="accion"
-                        value="borrador" formnovalidate>
-                    Guardar Borrador
-                </button>
-                <button type="submit" name="accion"
-                        value="publicar">
-                    Publicar Evento
-                </button>
+
+    <form>
+      <section class="bloque">
+        <h2>Información General</h2>
+        <div class="info-grid">
+          <div class="campos">
+            <div class="campo full">
+              <label for="nombre">Nombre del evento</label>
+              <input type="text" id="nombre" placeholder="Ej. Duki · Ameri World Tour">
             </div>
-        </form>
-    </main>
+            <div class="campo">
+              <label for="categoria">Categoría</label>
+              <select id="categoria">
+                <option>Concierto</option>
+                <option>Festival</option>
+                <option>Teatro</option>
+                <option>Deporte</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="lugar">Lugar</label>
+              <input type="text" id="lugar" placeholder="Ej. Estadio Cuscatlán">
+            </div>
+            <div class="campo">
+              <label for="fecha">Fecha</label>
+              <div class="fila-fecha">
+                <input type="date" id="fecha">
+                <input type="time" id="hora" aria-label="Hora">
+              </div>
+            </div>
+            <div class="campo">
+              <label for="capacidad">Capacidad</label>
+              <input type="number" id="capacidad" placeholder="Ej. 5000">
+            </div>
+            <div class="campo full">
+              <label for="descripcion">Descripción</label>
+              <input type="text" id="descripcion" placeholder="Breve descripción del evento">
+            </div>
+          </div>
+          <figure>
+            <img src="Duki Ameri World Tour.jpeg" alt="Afiche del evento Duki Ameri World Tour">
+          </figure>
+        </div>
+      </section>
+
+      <section class="bloque">
+        <div class="bloque-head">
+          <h2>Precios y Localidades</h2>
+          <a href="#" class="btn btn-ghost btn-sm">+ Agregar localidad</a>
+        </div>
+        <div class="localidades-grid">
+          <div class="tabla-loc">
+            <table>
+              <thead>
+                <tr>
+                  <th>Localidad</th>
+                  <th>Precio</th>
+                  <th>Cupos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>VIP</td>
+                  <td><input type="text" value="$120" aria-label="Precio VIP"></td>
+                  <td><input type="text" value="500" aria-label="Cupos VIP"></td>
+                </tr>
+                <tr>
+                  <td>Preferencial</td>
+                  <td><input type="text" value="$80" aria-label="Precio Preferencial"></td>
+                  <td><input type="text" value="1200" aria-label="Cupos Preferencial"></td>
+                </tr>
+                <tr>
+                  <td>General</td>
+                  <td><input type="text" value="$45" aria-label="Precio General"></td>
+                  <td><input type="text" value="3300" aria-label="Cupos General"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <figure>
+            <img src="localidades.png" alt="Mapa de localidades del recinto">
+          </figure>
+        </div>
+      </section>
+    </form>
+
+    <footer class="page-footer">
+      TickNova · Proyecto POO — Universidad Centroamericana José Simeón Cañas
+    </footer>
+  </main>
+
 </body>
 </html>
